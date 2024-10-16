@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
   fetch("http://localhost:3000/albums/")
-    .then(res=>res.json());
+    .then(res=>res.json())
     .then((data)=>{
       data=albums;
       console.log(albums);
