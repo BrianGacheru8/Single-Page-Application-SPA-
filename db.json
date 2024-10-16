@@ -1,1 +1,56 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "title": "The Dark Side of the Moon",
+      "artist": "Pink Floyd",
+      "releaseDate": "1973-03-01",
+      "genre": "Progressive Rock",
+      "coverImage": "https://linktoimage.com/darkside.jpg",
+      "summary": "A concept album exploring themes of conflict, greed, and time.",
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "title": "Thriller",
+      "artist": "Michael Jackson",
+      "releaseDate": "1982-11-30",
+      "genre": "Pop",
+      "coverImage": "https://linktoimage.com/thriller.jpg",
+      "summary": "The best-selling album of all time, featuring iconic tracks like 'Billie Jean' and 'Beat It'.",
+      "rating": 4.9
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Abbey Road",
+      "artist": "The Beatles",
+      "releaseDate": "1969-09-26",
+      "genre": "Rock",
+      "coverImage": "https://linktoimage.com/abbeyroad.jpg",
+      "summary": "A legendary album featuring the iconic song 'Come Together'.",
+      "rating": 4.7,
+    },
+    {
+      "id": 4,
+      "title": "Rumours",
+      "artist": "Fleetwood Mac",
+      "releaseDate": "1977-02-04",
+      "genre": "Rock",
+      "coverImage": "https://linktoimage.com/rumours.jpg",
+      "summary": "An album that captures the essence of heartbreak and love.",
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "title": "Back in Black",
+      "artist": "AC/DC",
+      "releaseDate": "1980-07-25",
+      "genre": "Hard Rock",
+      "coverImage": "https://linktoimage.com/backinblack.jpg",
+      "summary": "A high-energy album featuring powerful riffs and unforgettable songs.",
+      "rating": 4.8
+    }
+  ]
+}
 
