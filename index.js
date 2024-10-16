@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
   fetch("http://localhost:3000/albums/")
     .then(res=>res.json())
-    .then((data)=>{
+    .then((data)=>{;
       data=albums;
       console.log(albums);
       albums.forEach((album){
