@@ -1,2 +1,2 @@
 document.addEventListener("DOMContentLoaded",(){})
-  fetch(                        
+  fetch("http://localhost:3000/albums/                        
