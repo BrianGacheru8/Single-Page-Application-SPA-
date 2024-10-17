@@ -1,23 +1,56 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>ALBUMS</title>
-    <link rel="stylesheet" href="./index.css"></link>
-  </head>
-  <body>
-    <div id="start">
-      <h1>DISCOVER...LIVE...MUSIC...ART...ALBUMCOVERS.</h1>
-      <p>Looking for album art? We’ve got you covered! Our catalog of exclusive pre-made Cover Art has been custom-tailored to fit every genre of music. With styles ranging from electronic to rock, we’re sure that you’ll find a design that fits your music. </p>
-      <span><button action="#">Discover-></button> <button>How It Works</button></span>
-    </div>
-    <span id="spany"></span>
-    <form id="formy" action="#">
-      <label for="request">Enter a URL to an album cover you'd love for us to add in</label>
-      <input name="request" placeholder="Enter your URL here"></input>
-      <input name="review" placeholder="Rate this album cover"></input>
-      <input id="ibtn" type="submit" placeholder="submit">
-    </form>
-    <div>
-      <p>Customer Support line
+
+<head>
+  <meta charset="utf-8" />
+  <title>ALBUMS</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script defer src="./index.js"></script>
+</head>
+
+<body>
+  <header>
+    <h3>Album Rater</h3>
+  </header>
+
+  
+  <div id="album-menu">
+  
+  </div>
+
+
+  <div id="album-detail">
+    <img class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
+    <h2 class="name">Insert Name Here</h2>
+  </div>
+
+  <h3>Rating:</h3>
+  <p>
+    <span id='rating-display'>Insert rating here</span> / 10
+  </p>
+  <h3>Comment:</h3>
+  <p id='comment-display'>
+    Insert comment here
+  </p>
+
+
+  <form id="new-album">
+    <h4>Add New album</h4>
+    <label for="new-name">Name: </label>
+    <input type="text" name="name" id="new-name" />
+    <label for="new-restaurant">Restaurant: </label>
+    <input type="text" name="restaurant" id="new-restaurant" />
+    <label for="new-image">Image: </label>
+    <input type="text" name="image" id="new-image" />
+    <label for="new-rating">Rating: </label>
+    <input type="number" name="rating" id="new-rating" />
+    <label for="new-comment">Comment: </label>
+    <textarea name="new-comment" name="new-comment" id="new-comment"></textarea>
+    <input type="submit" id='submit-button' value="Create" />
+  </form>
+  
+    <div> 
+      <p>
         Whatsapp:"07xxxxxxx9813"
         Facebook:<link action="#">www.angieromero@facebook.com"</link>
       </p>
