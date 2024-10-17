@@ -1,4 +1,9 @@
 body{
   display:flex
   flex:flex-wrap
+  text-align:center
     }
+span{
+  width:500px
+  height:500px
+}
