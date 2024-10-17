@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const dv = document.createElement("div");
           dv.innerHTML = `
             <p>${album.name} - its rating is ${album.rating}</p>`;
-          tee.innerHTML=dv
-          //spany.appendChild(dv);
+          tee.appendChild(dv);
         });
 
         spany.appendChild(tee);
