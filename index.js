@@ -7,16 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
       albums.forEach((album) => {
         const tee = document.createElement("img");
         tee.src = album.coverImage;
-        tee.alt = album.name; // Optional: add alt text for accessibility
+        tee.alt = album.name;
 
         tee.addEventListener("click", () => {
           const dv = document.createElement("div");
           dv.innerHTML = `
             <p>${album.name} - its rating is ${album.rating}</p>`;
-          spany.appendChild(dv); // Append the new div to the spany element
+          spany.appendChild(dv);
         });
 
-        spany.appendChild(tee); // Append the image to the spany element
+        spany.appendChild(tee);
       });
     })
     .catch(err => {
@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const fData = new FormData(form1);
     const data = {
-      name: fData.get("name"), // Assuming the input has a name attribute
-      coverImage: fData.get("coverImage"), // Adjust as necessary
-      rating: fData.get("rating") // Adjust as necessary
+      name: fData.get("name"),
+      coverImage: fData.get("coverImage"),
+      rating: fData.get("rating")
     };
 
     fetch("http://localhost:3000/albums/", {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(data) // Fixed JSON.stringify usage
+      body: JSON.stringify(data)
     })
       .then(res => res.json())
       .then(dt => console.log(dt))
