@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://single-albums.onrender.com")
+    fetch("http://localhost:3000/albums")
         .then(res => res.json())
         .then((albums) => {
             const albumContainer = document.getElementById("album-container");
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Placeholder for fetch to POST new album
-        fetch("https://single-albums.onrender.com", { // Change this to your actual API endpoint for saving new albums
+        fetch("http://localhost:3000/albums", { // Change this to your actual API endpoint for saving new albums
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
