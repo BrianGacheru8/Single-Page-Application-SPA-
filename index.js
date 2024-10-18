@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
           const dun = document.getElementById("detail-image");
           dun.src=album.coverImage;
           const namey = document.getElementById("name");
-          namey.innerHTML = album.name}
+          namey.innerHTML = album.name
           const rate=document.getElementById("rating")
-          rate.innerHTML=`${album.rating}`
+          rate.innerHTML=`${album.rating}`})
      .catch((err)=>{
       console.error("Fetch error:", err);
       alert("Failed to fetch album data. Please try again later.");
