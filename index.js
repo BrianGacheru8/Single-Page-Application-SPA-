@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tee.alt = album.name;
         spany.appendChild(tee); // Append the image to the container
 
-        tee.addEventListener("click", () => {
+        tee.addEventListener("click", (album) => {
           const dun = document.getElementById("detail-image");
           dun.src = album.coverImage;
           const namey = document.getElementById("name");
