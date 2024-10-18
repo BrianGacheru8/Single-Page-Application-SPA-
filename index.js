@@ -1,63 +1,42 @@
-// index.js
-const handleClick = function (album) {
-  document.getElementById('name').innerText = album.name;
-  document.getElementById('image').src = album.image;
-  document.getElementById('rating').innerText = album.rating;
-  document.getElementById('comments').innerText = album.comments;
-};
+document.addEventListener("DOMContentLoaded", () => {
+    const randomAlbumsDiv = document.getElementById("random-albums");
+    
+    fetch("db.json")
+        .then(res => res.json())
+        .then(albums => {
+            const randomAlbums = albums.sort(() => 0.5 - Math.random()).slice(0, 4);
+            randomAlbums.forEach(album => {
+                const img = document.createElement("img");
+                img.src = album.coverImage;
+                img.alt = album.name;
+                img.addEventListener("click", () => showAlbumDetails(album));
+                randomAlbumsDiv.appendChild(img);
+            });
+        })
+        .catch(err => {
+            console.error("Fetch error:", err);
+            alert("Failed to fetch album data.");
+        });
 
-const addSubmitListener = () => {
-  const form = document.getElementById("new-album");
-  form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent form submission
+    const form = document.getElementById("new-album");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const fData = new FormData(form);
+        const data = {
+            name: fData.get("name"),
+            coverImage: fData.get("coverImage"),
+            rating: fData.get("rating")
+        };
+        
+        // Here, you would typically send this data to your server.
+        console.log("New album submitted:", data);
+        alert("Album added! Refresh to see it in the gallery.");
+        form.reset();
+    });
+});
 
-    const formData = new FormData(form);
-    const album = {
-      name: formData.get('name'),
-      image: formData.get('image'),
-      rating: formData.get('rating'),
-      comments: formData.get('comments'),
-    };
-
-    fetch("https://single-albums.onrender.com/albums", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(ramen)
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => console.log(error));
-  });
-};
-
-const displayRamens = () => {
-  fetch("https://single-albums.onrender.com/albums")
-    .then(res => res.json())
-    .then(data => {
-      const albumMenu = document.getElementById("album-menu");
-      albumMenu.innerHTML = ''; // Clear existing entries
-
-      data.forEach((ramen) => {
-        const bee = document.createElement("span");
-        const tee = document.createElement("img");
-        tee.src = album.image;
-        tee.alt = album.name;
-
-        // Add click event to the image
-        tee.addEventListener("click", () => handleClick(album));
-
-        bee.appendChild(tee);
-        albumMenu.appendChild(bee);
-      });
-    })
-    .catch(error => console.log(error));
-};
-
-const main = () => {
-  displayAlbums();
-  addSubmitListener();
-};
-
-document.addEventListener("DOMContentLoaded", main);
+function showAlbumDetails(album) {
+    document.getElementById("detail-image").src = album.coverImage;
+    document.getElementById("name").innerText = album.name;
+    document.getElementById("rating").innerText = `Rating: ${album.rating}`;
+}
