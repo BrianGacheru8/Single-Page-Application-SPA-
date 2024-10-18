@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tee.alt = album.name;
 
         tee.addEventListener("click", () => {
-          const dun=document.getElementbyId(img);
+          const dun=document.getElementbyId("detail-image");
           dun.src=album.coverImage;
           const namey=document.getElementbyId();
           namey.innerHTML=`${album.name}
