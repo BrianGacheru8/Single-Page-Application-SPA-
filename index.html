@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>ALBUMS</title>
-  <link rel="stylesheet" type="text/css" href="./index.css" />
-  <script defer src="./index.js"></script>
+  <title>Album Rater</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <script defer type="module" src="./src/index.js"></script>
 </head>
 
 <body>
@@ -14,37 +14,39 @@
   </header>
 
   
-  <span id="spany">
+  <div id="album-menu">
   
-  </span>
+  </div>
 
 
   <div id="album-detail">
-    <img id="detail-image" src="" alt="Insert Name Here" />
+    <img id="image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
+    <h2 id="name">Insert Name Here</h2>
   </div>
 
   <h3>Rating:</h3>
   <p>
     <span id='rating'>Insert rating here</span> / 10
   </p>
+  <h3>Comment:</h3>
+  <p id='comment'>
+    Insert comment here
+  </p>
+
 
   <form id="new-album">
-    <h4>Add New album</h4>
+    <h4>Add New Albums</h4>
     <label for="new-name">Name: </label>
     <input type="text" name="name" id="new-name" />
     <label for="new-image">Image: </label>
     <input type="text" name="image" id="new-image" />
     <label for="new-rating">Rating: </label>
-    <input type="number" name="rating" id="new-rating" /
+    <input type="number" name="rating" id="new-rating" />
+    <label for="new-comment">Comment: </label>
+    <textarea name="new-comment" name="new-comment" id="new-comment"></textarea>
     <input type="submit" id='submit-button' value="Create" />
   </form>
-  
-    <div> 
-      <p>
-        Whatsapp:"07xxxxxxx9813"
-        Facebook:<link action="#">www.angieromero@facebook.com"</link>
-      </p>
-    </div>
-    <script src="./index.js"></script>
-  </body>
+
+</body>
+
 </html>
