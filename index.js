@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("db.json")
+    fetch("http://localhost:3000/albums")
         .then(res => res.json())
         .then(data => {
             const albums = data.albums;
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Placeholder for fetch to POST new album
-        fetch("db.json", { // Change this to your actual API endpoint for saving new albums
+        fetch("http://localhost:3000/albums", { // Change this to your actual API endpoint for saving new albums
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
