@@ -1,57 +1,63 @@
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://single-albums.onrender.com/albums")
-    .then(res => res.json())
-    .then((albums) => {
-      console.log(albums);
-      const spany = document.getElementById("spany");
+// index.js
+const handleClick = function (album) {
+  document.getElementById('name').innerText = album.name;
+  document.getElementById('image').src = album.image;
+  document.getElementById('rating').innerText = album.rating;
+  document.getElementById('comments').innerText = album.comments;
+};
 
-      albums.forEach((album) => {
-        const tee = document.createElement("img");
-        tee.src = album.coverImage;
-        tee.alt = album.name;
-        spany.appendChild(tee); // Append the image to the container
+const addSubmitListener = () => {
+  const form = document.getElementById("new-album");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent form submission
 
-        tee.addEventListener("click", () => {
-          const dun = document.getElementById("detail-image");
-          dun.src = album.coverImage;
-          const namey = document.getElementById("name");
-          namey.innerHTML = album.name;
-          const rate = document.getElementById("rating");
-          rate.innerHTML = `${album.rating}`;
-        });
-      });
-    })
-    .catch((err) => {
-      console.error("Fetch error:", err);
-      alert("Failed to fetch album data. Please try again later.");
-    });
-
-  const form1 = document.getElementById("new-album");
-  form1.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const fData = new FormData(form1);
-    const data = {
-      name: fData.get("name"),
-      coverImage: fData.get("coverImage"),
-      rating: fData.get("rating")
+    const formData = new FormData(form);
+    const album = {
+      name: formData.get('name'),
+      image: formData.get('image'),
+      rating: formData.get('rating'),
+      comments: formData.get('comments'),
     };
 
     fetch("https://single-albums.onrender.com/albums", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(ramen)
     })
       .then(res => res.json())
-      .then(dt => {
-        console.log(dt);
-        // Optionally, you can reset the form or update the UI here
-        form1.reset(); // Reset the form after submission
+      .then(data => {
+        console.log(data);
       })
-      .catch(err => {
-        console.error("Error during album submission:", err);
-        alert("Error: " + err);
+      .catch(error => console.log(error));
+  });
+};
+
+const displayRamens = () => {
+  fetch("https://single-albums.onrender.com/albums")
+    .then(res => res.json())
+    .then(data => {
+      const albumMenu = document.getElementById("album-menu");
+      albumMenu.innerHTML = ''; // Clear existing entries
+
+      data.forEach((ramen) => {
+        const bee = document.createElement("span");
+        const tee = document.createElement("img");
+        tee.src = album.image;
+        tee.alt = album.name;
+
+        // Add click event to the image
+        tee.addEventListener("click", () => handleClick(album));
+
+        bee.appendChild(tee);
+        albumMenu.appendChild(bee);
       });
-})
+    })
+    .catch(error => console.log(error));
+};
+
+const main = () => {
+  displayAlbums();
+  addSubmitListener();
+};
+
+document.addEventListener("DOMContentLoaded", main);
