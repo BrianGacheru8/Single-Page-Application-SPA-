@@ -1,42 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const randomAlbumsDiv = document.getElementById("random-albums");
-    
-    fetch("db.json")
-        .then(res => res.json())
-        .then(albums => {
-            const randomAlbums = albums.sort(() => 0.5 - Math.random()).slice(0, 4);
-            randomAlbums.forEach(album => {
-                const img = document.createElement("img");
-                img.src = album.coverImage;
-                img.alt = album.name;
-                img.addEventListener("click", () => showAlbumDetails(album));
-                randomAlbumsDiv.appendChild(img);
-            });
-        })
-        .catch(err => {
-            console.error("Fetch error:", err);
-            alert("Failed to fetch album data.");
+  fetch("https://single-albums.onrender.com/albums")
+    .then(res => res.json())
+    .then((albums) => {
+      console.log(albums);
+      const spany = document.getElementById("spany");
+
+      albums.forEach((album) => {
+        const tee = document.createElement("img");
+        tee.src = album.coverImage;
+        tee.alt = album.name;
+        spany.appendChild(tee); // Append the image to the container
+
+        tee.addEventListener("click", () => {
+          const dun = document.getElementById("detail-image");
+          dun.src = album.coverImage;
+          const namey = document.getElementById("name");
+          namey.innerHTML = album.name;
+          const rate = document.getElementById("rating");
+          rate.innerHTML = `${album.rating}`;
         });
-
-    const form = document.getElementById("new-album");
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const fData = new FormData(form);
-        const data = {
-            name: fData.get("name"),
-            coverImage: fData.get("coverImage"),
-            rating: fData.get("rating")
-        };
-        
-        // Here, you would typically send this data to your server.
-        console.log("New album submitted:", data);
-        alert("Album added! Refresh to see it in the gallery.");
-        form.reset();
+      });
+    })
+    .catch((err) => {
+      console.error("Fetch error:", err);
+      alert("Failed to fetch album data. Please try again later.");
     });
-});
 
-function showAlbumDetails(album) {
-    document.getElementById("detail-image").src = album.coverImage;
-    document.getElementById("name").innerText = album.name;
-    document.getElementById("rating").innerText = `Rating: ${album.rating}`;
-}
+  const form1 = document.getElementById("new-album");
+  form1.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const fData = new FormData(form1);
+    const data = {
+      name: fData.get("name"),
+      coverImage: fData.get("coverImage"),
+      rating: fData.get("rating")
+    };
+
+    fetch("https://single-albums.onrender.com/albums", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(dt => {
+        console.log(dt);
+        // Optionally, you can reset the form or update the UI here
+        form1.reset(); // Reset the form after submission
+      })
+      .catch(err => {
+        console.error("Error during album submission:", err);
+        alert("Error: " + err);
+      });
+});
