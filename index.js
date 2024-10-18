@@ -54,4 +54,4 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Error during album submission:", err);
         alert("Error: " + err);
       });
-});
+})
