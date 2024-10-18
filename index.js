@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Failed to fetch album data. Please try again later.");
     });
 
-  const form1 = document.getElementById("formy");
+  const form1 = document.getElementById("new-album");
   form1.addEventListener("submit", (e) => {
     e.preventDefault();
     
