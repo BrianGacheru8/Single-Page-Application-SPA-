@@ -2,27 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
-}
-
-header {
+    background-color: black;
     text-align: center;
-}
-
-.album-covers {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.album-cover {
-    width: 150px;
-    cursor: pointer;
-}
-
-.album-cover img {
-    width: 100%;
-    border-radius: 8px;
 }
 
 h2 {
