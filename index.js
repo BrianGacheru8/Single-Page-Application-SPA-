@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const dun=document.getElementbyId("detail-image");
           dun.src=album.coverImage;
           const namey=document.getElementbyId("name");
-          namey.innerHTML=`${album.name}
+          namey.innerHTML=`${album.name}`
         });
         
       });
