@@ -10,13 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
         tee.alt = album.name;
 
         tee.addEventListener("click", () => {
-          const dv = document.createElement("div");
-          dv.innerHTML = `
-            <p>${album.name} - its rating is ${album.rating}</p>`;
-          spany.appendChild(dv);
+          const dun=document.getElementbyId(img);
+          dun.src=album.coverImage;
+          const namey=document.getElementbyId();
+          namey.innerHTML=`${album.name}
         });
-
-        spany.appendChild(tee);
+        
       });
     })
     .catch(err => {
