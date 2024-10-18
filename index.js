@@ -11,26 +11,25 @@ document.addEventListener("DOMContentLoaded", () => {
         tee.alt = album.name;
         spany.appendChild(tee); // Append the image to the container
 
-        tee.addEventListener("click", (album) => {
+        tee.addEventListener("click", () => {
           const dun = document.getElementById("detail-image");
-          dun.src=album.coverImage;
+          dun.src = album.coverImage;
           const namey = document.getElementById("name");
-          namey.innerHTML = album.name
-          const rate=document.getElementById("rating")
-          rate.innerHTML=`${album.rating}`})
-     .catch((err)=>{
-      console.error("Fetch error:", err);
-      alert("Failed to fetch album data. Please try again later.");
-    });
-        })
+          namey.innerHTML = album.name;
+          const rate = document.getElementById("rating");
+          rate.innerHTML = `${album.rating}`;
         });
       });
     })
+    .catch((err) => {
+      console.error("Fetch error:", err);
+      alert("Failed to fetch album data. Please try again later.");
+    });
 
   const form1 = document.getElementById("new-album");
   form1.addEventListener("submit", (e) => {
     e.preventDefault();
-    
+
     const fData = new FormData(form1);
     const data = {
       name: fData.get("name"),
@@ -49,9 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(dt => {
         console.log(dt);
         // Optionally, you can reset the form or update the UI here
+        form1.reset(); // Reset the form after submission
       })
       .catch(err => {
         console.error("Error during album submission:", err);
         alert("Error: " + err);
       });
-  })
+});
