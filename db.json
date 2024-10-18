@@ -1,32 +1,54 @@
-[
+{
+  "albums": [
     {
-        "id":"1"
-        "name": "Abbey Road",
-        "coverImage": "https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg",
-        "rating": "5"
+      "id": 1,
+      "title": "The Dark Side of the Moon",
+      "artist": "Pink Floyd",
+      "releaseDate": "1973-03-01",
+      "genre": "Progressive Rock",
+      "coverImage": "https://www.istockphoto.com/photo/diverse-group-of-teenagers-looking-at-abstract-art-in-art-gallery-gm1603191573-530342504?utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fart&utm_medium=affiliate&utm_source=unsplash&utm_term=art%3A%3Aaffiliate-collections%3Ab",
+      "summary": "A concept album exploring themes of conflict, greed, and time.",
+      "rating": 4.8
     },
     {
-        "id":"2"
-        "name": "Dark Side of the Moon",
-        "coverImage": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pink_Floyd_-_The_Dark_Side_of_the_Moon.png",
-        "rating": "5"
+      "id": 2,
+      "title": "Thriller",
+      "artist": "Michael Jackson",
+      "releaseDate": "1982-11-30",
+      "genre": "Pop",
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdxEziqpbMwLaI0_pdrdlJdKcdHHBIIra8PQ&s",
+      "summary": "The best-selling album of all time, featuring iconic tracks like 'Billie Jean' and 'Beat It'.",
+      "rating": 4.9
     },
     {
-        "id":"3"
-        "name": "Thriller",
-        "coverImage": "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png",
-        "rating": "5"
+      "id": 3,
+      "title": "Abbey Road",
+      "artist": "The Beatles",
+      "releaseDate": "1969-09-26",
+      "genre": "Rock",
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSObuvSuAx2YLfEwKXucqFVtM38Sp8uoW9XaA&s",
+      "summary": "A legendary album featuring the iconic song 'Come Together'.",
+      "rating": 4.7
     },
     {
-        "id":"4"
-        "name": "Back in Black",
-        "coverImage": "https://upload.wikimedia.org/wikipedia/en/0/0f/Back_in_Black.jpg",
-        "rating": "4"
+      "id": 4,
+      "title": "Rumours",
+      "artist": "Fleetwood Mac",
+      "releaseDate": "1977-02-04",
+      "genre": "Rock",
+      "coverImage": "https://www.groundguitar.com/wp-content/uploads/2024/02/Queen-News-Of-The-World-1976-1021x1024.jpg",
+      "summary": "An album that captures the essence of heartbreak and love.",
+      "rating": 4.6
     },
     {
-        "id":"5"
-        "name": "Rumours",
-        "coverImage": "https://upload.wikimedia.org/wikipedia/en/2/20/Fleetwood_Mac_-_Rumours.png",
-        "rating": "4"
+      "id": 5,
+      "title": "Back in Black",
+      "artist": "AC/DC",
+      "releaseDate": "1980-07-25",
+      "genre": "Hard Rock",
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJMOOltp3e1LgMQhDrXlY1vCtkhjlODyAIjA&s",
+      "summary": "A high-energy album featuring powerful riffs and unforgettable songs.",
+      "rating": 4.8
     }
-]
+  ]
+}
