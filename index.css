@@ -1,4 +1,4 @@
-body {
+/*body {
     background-color: mediumaquamarine;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,8 +10,8 @@ h3
 div {
     font-weight: 400; /* Changed to a valid value */
     position: absolute;
-    width: 100%; /* Add width and height as needed */
-    height: 100%; /* Adjust based on your layout */
+    width: 50%; /* Add width and height as needed */
+    height: 50%; /* Adjust based on your layout */
 }
 
 h2 {
