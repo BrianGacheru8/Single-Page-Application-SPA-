@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const dun = document.getElementById("detail-image");
           dun.src = `${album.coverImage}`;
           const namey = document.getElementById("name");
-          namey.innerHTML = `${album.name}`;
+          namey.innerHTML = `${album.name}`})
         });
       });
     })
