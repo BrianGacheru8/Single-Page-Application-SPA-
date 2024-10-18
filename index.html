@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Album Cover Gallery</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Album Cover Gallery</h1>
+    <h1 id="header">Album Cover Gallery</h1>
     
-    <div id="spany" class="album-container"></div>
+    <div id="album-container" class="album-container"></div>
     
-    <div id="album-details">
-        <h2 id="name"></h2>
-        <img id="detail-image" alt="Album Cover" />
-        <p id="rating"></p>
+    <div id="album-details" class="details">
+        <h2 id="album-title"></h2>
+        <h3 id="album-artist"></h3>
+        <img id="album-cover" alt="Album Cover" />
+        <p id="album-release-date"></p>
+        <p id="album-genre"></p>
+        <p id="album-summary"></p>
+        <p id="album-rating"></p>
     </div>
 
-    <form id="new-album">
+    <form id="new-album-form">
         <h2>Add Your Favorite Album</h2>
-        <input type="text" name="name" placeholder="Album Name" required>
-        <input type="text" name="coverImage" placeholder="Cover Image URL" required>
-        <input type="number" name="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+        <input type="text" id="album-title-input" placeholder="Album Title" required>
+        <input type="text" id="album-artist-input" placeholder="Artist" required>
+        <input type="text" id="album-cover-input" placeholder="Cover Image URL" required>
+        <input type="date" id="album-release-date-input" required>
+        <input type="text" id="album-genre-input" placeholder="Genre" required>
+        <input type="number" id="album-rating-input" placeholder="Rating (1-5)" min="1" max="5" required>
+        <textarea id="album-summary-input" placeholder="Summary" required></textarea>
         <button type="submit">Add Album</button>
     </form>
 
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
