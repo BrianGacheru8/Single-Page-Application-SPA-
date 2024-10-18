@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     })
-    .catch(err => {
+    .catch((err)=>{
       console.error("Fetch error:", err);
       alert("Failed to fetch album data. Please try again later.");
     });
