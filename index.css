@@ -1,28 +1,54 @@
 body {
-    background-color: mediumaquamarine;
+    background-color: aquamarine;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     text-align: center;
 }
-h3
 
-div {
-    font-weight: 400; /* Changed to a valid value */
-    position: absolute;
-    width: 50%; /* Add width and height as needed */
-    height: 50%; /* Adjust based on your layout */
+h1 {
+    color: green;
 }
 
-h2 {
-    margin-bottom: 10px;
+.album-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-#album-details {
+.album-container img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid purple;
+    border-radius: 5px;
+}
+
+.album-container img:hover {
+    transform: scale(1.05);
+}
+
+.details {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form {
     margin-top: 20px;
 }
 
-#spany img {
-    width: 20%;
-    height: auto; /* Adjusted to maintain aspect ratio 
+button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
 }
