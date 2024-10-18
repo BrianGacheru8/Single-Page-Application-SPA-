@@ -1,14 +1,20 @@
 body {
-    background-color:mediumaquamarine;
+    background-color: mediumaquamarine;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     text-align: center;
-div{
-    font-weight:40%;
-    position:absolute;
-    background-image:"https://www.billboard.com/wp-content/uploads/2023/08/Best-Album-Covers-of-All-Time-billboard-1548.jpg?w=875&h=583&crop=1"
 }
+
+div {
+    font-weight: 400; /* Changed to a valid value */
+    position: absolute;
+    background-image: url("https://www.billboard.com/wp-content/uploads/2023/08/Best-Album-Covers-of-All-Time-billboard-1548.jpg?w=875&h=583&crop=1");
+    background-size: cover; /* Ensures the image covers the div */
+    width: 100%; /* Add width and height as needed */
+    height: 100%; /* Adjust based on your layout */
+}
+
 h2 {
     margin-bottom: 10px;
 }
@@ -17,7 +23,7 @@ h2 {
     margin-top: 20px;
 }
 
-#spany img{
-    width:20%;
-    height:10%;
+#spany img {
+    width: 20%;
+    height: auto; /* Adjusted to maintain aspect ratio */
 }
