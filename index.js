@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:3000/albums/")
+  fetch("https://single-albums.onrender.com/albums")
     .then(res => res.json())
     .then((albums) => {
       console.log(albums);
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rating: fData.get("rating")
     };
 
-    fetch("http://localhost:3000/albums/", {
+    fetch("https://single-albums.onrender.com/albums", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
