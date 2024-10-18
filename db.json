@@ -1,25 +1,30 @@
 [
     {
+        "id":1
         "name": "Abbey Road",
         "coverImage": "https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg",
         "rating": "5"
     },
     {
+        "id":2
         "name": "Dark Side of the Moon",
         "coverImage": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pink_Floyd_-_The_Dark_Side_of_the_Moon.png",
         "rating": "5"
     },
     {
+        "id":3
         "name": "Thriller",
         "coverImage": "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png",
         "rating": "5"
     },
     {
+        "id":4
         "name": "Back in Black",
         "coverImage": "https://upload.wikimedia.org/wikipedia/en/0/0f/Back_in_Black.jpg",
         "rating": "4"
     },
     {
+        "id":"5"
         "name": "Rumours",
         "coverImage": "https://upload.wikimedia.org/wikipedia/en/2/20/Fleetwood_Mac_-_Rumours.png",
         "rating": "4"
