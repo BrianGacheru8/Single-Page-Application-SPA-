@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tee.addEventListener("click", () => {
           const dun=document.getElementbyId("detail-image");
           dun.src=album.coverImage;
-          const namey=document.getElementbyId();
+          const namey=document.getElementbyId("name");
           namey.innerHTML=`${album.name}
         });
         
