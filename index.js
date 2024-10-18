@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
           namey.innerHTML = `${album.name}`
           const rate=document.getElementById("rating")
           rate.innerHTML=`${album.rating}`
+     .catch((err)=>{
+      console.error("Fetch error:", err);
+      alert("Failed to fetch album data. Please try again later.");
+    });
         })
         });
       });
     })
-    .catch((err)=>{
-      console.error("Fetch error:", err);
-      alert("Failed to fetch album data. Please try again later.");
-    });
 
   const form1 = document.getElementById("new-album");
   form1.addEventListener("submit", (e) => {
