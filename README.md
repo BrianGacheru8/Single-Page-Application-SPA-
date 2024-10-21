@@ -15,7 +15,6 @@ To deploy this application, you can follow these steps:
 2. **Host the JSON Server**:
    - For production, consider using a hosted solution for your JSON data, like [Heroku](https://www.heroku.com/) or [Render](https://render.com/), to set up a JSON server.
    - Alternatively, you can use [Mockoon](https://mockoon.com/) for local development or deploy a simple Node.js server to serve your JSON data.
-   - NOTE, RENDER AINT WORKING ROIGHT NOW SO USE LOCAL JSON SERVER.
 
 3. **Update the API Endpoint**:
    - Make sure to update the API endpoint in `index.js` to point to your hosted JSON server.
@@ -49,10 +48,12 @@ To run the project locally:
 3. **Open `index.html`** in a web browser. 
    - You may use a local server (like Live Server in VSCode) for testing.
 
+## Demo
+https://briangacheru8.github.io/Single-Page-Application-SPA-/
 
 
 
-
+## License
 
 MIT License
 
